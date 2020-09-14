@@ -9,6 +9,11 @@ return [
      */
     'use_extended_response' => \env('EASY_ERROR_HANDLER_USE_EXTENDED_RESPONSE', false),
 
+    /**
+     * Use default set of error response builders.
+     */
+    'use_default_builders' => \env('EASY_ERROR_HANDLER_USE_DEFAULT_BUILDERS', true),
+
     /*
     |--------------------------------------------------------------------------
     | Error response
@@ -20,11 +25,13 @@ return [
     'response' => [
         'code' => 'code',
         'exception' => 'exception',
-        'exception_class' => 'class',
-        'exception_file' => 'file',
-        'exception_line' => 'line',
-        'exception_message' => 'message',
-        'exception_trace' => 'trace',
+        'extended_exception_keys' => [
+            'class' => 'class',
+            'file' => 'file',
+            'line' => 'line',
+            'message' => 'message',
+            'trace' => 'trace',
+        ],
         'message' => 'message',
         'sub_code' => 'sub_code',
         'time' => 'time',
