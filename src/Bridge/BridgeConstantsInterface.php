@@ -40,9 +40,4 @@ interface BridgeConstantsInterface
      * @var string
      */
     public const TAG_ERROR_RESPONSE_BUILDER_PROVIDER = 'easy_error_handler.error_response_builder_provider';
-
-    /**
-     * @var string
-     */
-    public const TRANSLATION_NAMESPACE = 'easy-error-handler';
 }
