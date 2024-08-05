@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace EonX\EasyErrorHandler\Bugsnag\Resolver;
+namespace EonX\EasyErrorHandler\Bugsnag\Ignorer;
 
 use Throwable;
 
-interface BugsnagIgnoreExceptionsResolverInterface
+interface BugsnagExceptionIgnorerInterface
 {
     public function shouldIgnore(Throwable $throwable): bool;
 }
