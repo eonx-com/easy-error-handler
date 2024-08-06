@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace EonX\EasyErrorHandler\Tests\Unit\Common\Builder;
+namespace EonX\EasyErrorHandler\Tests\Unit\Bundle;
 
 use EonX\EasyErrorHandler\Tests\Stub\Exception\BaseExceptionStub;
 use EonX\EasyErrorHandler\Tests\Stub\Exception\ValidationExceptionStub;
@@ -12,7 +12,7 @@ use PHPUnit\Framework\TestCase;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
-final class TestRenderWithDefaultBuildersDataProvider
+final class TestRenderWithDefaultBuilderDataProvider
 {
     public static function provide(): iterable
     {
