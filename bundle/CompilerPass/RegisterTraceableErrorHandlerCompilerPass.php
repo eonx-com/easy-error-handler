@@ -14,10 +14,7 @@ final class RegisterTraceableErrorHandlerCompilerPass implements CompilerPassInt
 {
     public function process(ContainerBuilder $container): void
     {
-        if (
-            $container->has('test.service_container')
-            || ($container->hasParameter('kernel.debug') && $container->getParameter('kernel.debug'))
-        ) {
+        if ($container->hasParameter('kernel.debug') && $container->getParameter('kernel.debug')) {
             $container
                 ->register(TraceableErrorHandlerInterface::class, TraceableErrorHandler::class)
                 ->setDecoratedService(ErrorHandlerInterface::class)
